@@ -36,7 +36,13 @@ const Login = () => {
         const response = await loginUser(val).unwrap();
         dispatch(addUser(response));
         toast.success('Successfully Logged In');
-        nav('/')
+
+        // Check if the user is an admin
+        if (response.isAdmin) {
+          nav('/admin'); // Redirect to admin layout
+        } else {
+          nav('/'); // Redirect to cart page for regular users
+        }
 
       } catch (err) {
         toast.error(err.data?.message);

@@ -19,7 +19,8 @@ const locations = [
 
 const Menu = () => {
 
-  const { isLoading, error, data } = useGetAllProductsQuery();
+  const { data } = useGetAllProductsQuery();
+  console.log(data)
 
   return (
     <>

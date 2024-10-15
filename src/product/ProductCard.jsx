@@ -13,6 +13,8 @@ import { useNavigate } from 'react-router';
 
 const ProductCard = ({ product: { image, title, price, _id } }) => {
 
+
+
   const nav = useNavigate();
 
   return (

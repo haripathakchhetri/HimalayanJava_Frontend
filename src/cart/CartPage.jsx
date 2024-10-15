@@ -71,14 +71,8 @@ const CartPage = () => {
           </div>
 
           <Button
-            disabled={user?.isAdmin}
-            onClick={() => {
-              if (user && !user?.isAdmin) {
-                handleOpen();
-              } else {
-                nav('/login');
-              }
-            }}
+            onClick={handleOpen}
+
             className='mt-10 bg-blue-600 text-white hover:bg-blue-700'
           >
             Place An Order

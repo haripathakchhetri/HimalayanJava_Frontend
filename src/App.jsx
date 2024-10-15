@@ -6,6 +6,15 @@ import Register from "./auth/Register";
 import ProductDetail from "./product/ProductDetail";
 import CartPage from "./cart/CartPage";
 import { useState } from "react";
+import AdminRoute from "./components/AdminRoute";
+import AdminLayout from "./admin-panel/Layout";
+import User from "./admin-ui/User";
+import Products from "./admin-ui/Products";
+import Orders from "./admin-ui/Orders";
+import Dashboard from "./admin-ui/Dashboard";
+import AddForm from "./admin-ui/AddForm";
+import ProductEdit from "./admin-panel/ProductEdit/ProductEdit";
+
 
 const App = () => {
 
@@ -18,7 +27,8 @@ const App = () => {
       children: [
         {
           index: true,
-          element: <FrontPage />
+          element: <FrontPage />,
+
         },
 
         {
@@ -39,8 +49,49 @@ const App = () => {
         {
           path: "cart-page",
           element: <CartPage />
+        },
+
+
+        //admin routes
+        {
+          path: 'admin',
+          element: <AdminRoute />,
+          children: [
+
+            {
+              path: 'admin-dashboard',
+              element: <Dashboard />
+            },
+
+            {
+              path: "user-details",
+              element: <User />
+            },
+
+            {
+              path: "products",
+              element: <Products />
+            },
+
+            {
+              path: "order-details",
+              element: <Orders />
+            },
+
+            {
+              path: 'product-add',
+              element: <AddForm />
+            },
+
+            {
+              path: 'product-edit/:id',
+              element: <ProductEdit />
+            }
+          ]
         }
       ]
+
+
     }
   ]);
 
