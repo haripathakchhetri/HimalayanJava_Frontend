@@ -1,6 +1,6 @@
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div className="flex items-center justify-center h-[80vh]">Dashboard</div>
   )
 }
 export default Dashboard

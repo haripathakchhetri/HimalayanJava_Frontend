@@ -9,8 +9,9 @@ import {
 
 import { toast } from "react-toastify"
 import { useDispatch } from "react-redux";
-import { useAddOrderMutation } from "../order/orderApi";
+
 import { removeCarts } from "../cart/cartSlice";
+import { useAddOrderMutation } from "../order/orderApi";
 
 
 const CustomDialog = ({ open, handleOpen, user, carts, totalAmount }) => {
@@ -47,12 +48,10 @@ const CustomDialog = ({ open, handleOpen, user, carts, totalAmount }) => {
 
   return (
     <Dialog open={open} handler={handleOpen}>
-      <DialogHeader>Its a simple dialog.</DialogHeader>
+      <DialogHeader>Place An Order?</DialogHeader>
       <DialogBody>
-        The key to more success is to have a lot of pillows. Put it this way,
-        it took me twenty five years to get these plants, twenty five years of
-        blood sweat and tears, and I&apos;m never giving up, I&apos;m just
-        getting started. I&apos;m up to something. Fan luv.
+        Are you sure you want to place this order? This action cannot be
+        undone.
       </DialogBody>
       <DialogFooter>
         <Button

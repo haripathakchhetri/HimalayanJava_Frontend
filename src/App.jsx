@@ -8,7 +8,7 @@ import CartPage from "./cart/CartPage";
 import { useState } from "react";
 import AdminRoute from "./components/AdminRoute";
 import AdminLayout from "./admin-panel/Layout";
-import User from "./admin-ui/User";
+
 import Products from "./admin-ui/Products";
 import Orders from "./admin-ui/Orders";
 import Dashboard from "./admin-ui/Dashboard";
@@ -31,15 +31,6 @@ const App = () => {
 
         },
 
-        {
-          path: "login",
-          element: <Login />
-        },
-
-        {
-          path: "register",
-          element: <Register />
-        },
 
         {
           path: "product-detail/:id",
@@ -52,6 +43,17 @@ const App = () => {
         },
 
 
+        {
+          path: "login",
+          element: <Login />
+        },
+
+        {
+          path: "register",
+          element: <Register />
+        },
+
+
         //admin routes
         {
           path: 'admin',
@@ -59,13 +61,8 @@ const App = () => {
           children: [
 
             {
-              path: 'admin-dashboard',
+              path: "admin-dashboard",
               element: <Dashboard />
-            },
-
-            {
-              path: "user-details",
-              element: <User />
             },
 
             {

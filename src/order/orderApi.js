@@ -4,26 +4,31 @@ import { baseUrl } from "../app/constants/spi_urls";
 export const orderApi = createApi({
   reducerPath: 'orderApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: `${baseUrl}/orders`
+    baseUrl: `${baseUrl}/orders`,
   }),
-
   endpoints: (builder) => ({
+
+    getAllOrders: builder.query({
+      query: (q) => ({
+        url: '/all',
+        method: 'GET'
+      }),
+      providesTags: ['Orders']
+    }),
 
     addOrder: builder.mutation({
       query: (q) => ({
-        url: '/',
+        url: `/`,
         body: q.body,
         headers: {
-          Authorization: q.token
+          Authorization: q.token // Make sure to format the token correctly
         },
-        method: 'POST'
+        method: 'POST',
       }),
-      invalidatesTags: ['Orders']
-    })
-
-
-
-  })
+      invalidatesTags: ['Orders'],
+    }),
+  }),
 });
 
-export const { useAddOrderMutation } = orderApi
+// Export hooks for usage in functional components
+export const { useAddOrderMutation, useGetAllOrdersQuery } = orderApi;

@@ -2,7 +2,7 @@ import { Drawer, Typography } from "@material-tailwind/react";
 import { SiSimpleanalytics } from "react-icons/si";
 import { useNavigate } from "react-router";
 import { RxDashboard } from "react-icons/rx";
-import { FaRegCircleUser } from "react-icons/fa6";
+
 import { BsCart4 } from "react-icons/bs";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 
@@ -14,12 +14,6 @@ export const adminSidebarMenuItems = [
     icon: <RxDashboard />
   },
 
-  {
-    id: 'users',
-    label: 'Users',
-    path: '/admin/user-details',
-    icon: <FaRegCircleUser />
-  },
 
   {
     id: 'products',
