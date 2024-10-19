@@ -4,6 +4,7 @@ import { FaBars } from 'react-icons/fa'
 import Equipment from "../assets/Equipment.png"
 
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -18,16 +19,16 @@ function Navbar() {
       {/* Desktop Navigation */}
       <ul className='flex md:hidden justify-center items-center flex-1'>
         <li className='mx-4 text-black'>
-          <a href="">About</a>
+          <a href="#about">About</a>
         </li>
         <li className='mx-4 text-black'>
-          <a href="#gallery">Services</a>
+          <a href="#services">Services</a>
         </li>
         <li>
           <img className='mx-8' src={Equipment} alt="" />
         </li>
         <li className='mx-4'>
-          <a href="#deals">Trainings</a>
+          <a href="#services">Trainings</a>
         </li>
         <li className='mx-4'>
           <a href="#contact">Contact</a>

@@ -2,7 +2,7 @@ import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const About = () => {
   return (
-    <div className="flex flex-row md:flex-col md:mb-12 mx-4 min-h-[600px] ">
+    <div id='about' className="flex flex-row md:flex-col md:mb-12 mx-4 min-h-[600px] ">
 
       {/* Left Column */}
       <div className="flex flex-col p-8 items-start flex-1 mt-[80px]">

@@ -135,7 +135,7 @@ const AddForm = () => {
 
         </div>
 
-        <Button isLoading={isLoading} type="submit" className="mt-6" fullWidth>
+        <Button type="submit" className="mt-6" fullWidth>
           Submit
         </Button>
 

@@ -5,7 +5,9 @@ import Cookies from "../assets/Cookies.png"
 
 const Services = () => {
   return (
-    <div className="  flex flex-row md:flex-col md:mb-12 mr-24 ml-4 min-h-[420px] my-24">
+
+
+    <div id='services' className=" flex flex-row md:flex-col md:mb-12 mr-24 ml-4 min-h-[420px] my-24">
       {/* left Column */}
       <div className="flex flex-col p-8 items-start flex-1">
         <h2 className="text-3xl md:text-2xl font-bold my-4 ">Our Services</h2>
@@ -52,6 +54,8 @@ const Services = () => {
       </div>
 
     </div>
+
+
   )
 }
 export default Services

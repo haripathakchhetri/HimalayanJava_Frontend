@@ -1,21 +1,8 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Typography,
-  Button
-} from "@material-tailwind/react";
+
 import { useGetAllProductsQuery } from "../product/productApi";
 import ProductCard from "../product/ProductCard";
 
-const locations = [
-  {
-    name: 'Patan Durbar Square',
-    img: 'https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
-    alt: 'Patan Durbar Square'
-  },
-  // Add more locations here as needed
-];
+
 
 const Menu = () => {
 

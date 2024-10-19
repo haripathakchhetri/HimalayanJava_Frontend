@@ -2,6 +2,8 @@ import { Avatar, Card, Typography, Button } from "@material-tailwind/react";
 import { imageUrl } from "../app/constants/spi_urls";
 import { useGetAllProductsQuery, useRemoveProductByIdMutation } from "../product/productApi";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+
 
 const Products = () => {
   const { isLoading, data } = useGetAllProductsQuery();
