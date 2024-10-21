@@ -65,7 +65,7 @@ const ProductEditForm = ({ product }) => {
               id: product._id
             }).unwrap();
 
-            toast.success('product added successfully');
+            toast.success('Product Edited Successfully');
             nav(-1);
 
           } else {

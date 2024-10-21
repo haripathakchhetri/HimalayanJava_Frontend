@@ -65,14 +65,14 @@ const Products = () => {
                     <Avatar src={`${imageUrl}${image}`} alt="avatar" />
                   </td>
                   <td className={classes}>
-                    <Typography variant="small" color="blue-gray" className="font-normal">
+                    <Typography variant="small" color="blue-gray" className="font-bold">
                       {title}
                     </Typography>
                   </td>
 
                   <td className={classes}>
-                    <Typography variant="small" color="blue-gray" className="font-normal">
-                      {price}
+                    <Typography variant="small" color="blue-gray" className="font-bold">
+                      Rs.{price}
                     </Typography>
                   </td>
 
