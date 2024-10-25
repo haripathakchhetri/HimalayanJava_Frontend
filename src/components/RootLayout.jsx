@@ -4,9 +4,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const RootLayout = () => {
 
-
-
-
   return (
     <>
       <Outlet />
