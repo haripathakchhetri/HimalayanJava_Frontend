@@ -1,3 +1,3 @@
-export const baseUrl = "http://192.168.10.88:3000/api"
+export const baseUrl = "https://himalayan-java-clone-backend.onrender.com/api"
 
-export const imageUrl = "http://192.168.10.88:3000";
+export const imageUrl = "https://himalayan-java-clone-backend.onrender.com";
