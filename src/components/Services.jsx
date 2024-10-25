@@ -13,7 +13,7 @@ const Services = () => {
         <h2 className="text-3xl md:text-2xl font-bold my-4 ">Our Services</h2>
         <p className="mt-3 text-gray-500 text-2xl md:text-xl">Himalayan Java offers its customers the best-tasting coffee beverages in the country. We have achieved this by using high-quality ingredients and strictly following preparation guidelines.</p>
 
-        <button className="bg-orange-900 text-gray-300 text-xl md:text-lg py-3 px-7 mt-11">Contact Us</button>
+        <a href="#contact"><button className="bg-orange-900 text-gray-300 text-xl md:text-lg py-3 px-7 mt-11">Contact Us</button></a>
 
       </div>
 

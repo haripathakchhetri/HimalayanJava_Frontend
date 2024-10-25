@@ -56,7 +56,7 @@ const Find = () => {
     <div id="findUs" className="flex flex-col items-center mx-4 min-h-[600px]">
       <h1 className="text-5xl md:text-3xl font-bold my-4">Find Us</h1>
       <p className="text-gray-700 text-2xl md:text-xl text-center">
-        Himalayan Java outlets are available with the best <br /> coffee throughout the major cities of Nepal.
+        CoffeeHub outlets are available with the best <br /> coffee throughout the major cities of Nepal.
       </p>
 
       <div className="my-10 p-8">
