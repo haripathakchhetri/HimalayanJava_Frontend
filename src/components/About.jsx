@@ -8,7 +8,7 @@ const About = () => {
       <div className="flex flex-col p-8 items-start flex-1 mt-[80px]">
         <h1 className="text-5xl md:text-3xl font-bold my-4 text-orange-900">From Crop To Cup</h1>
         <p className="mt-3 text-gray-500 text-2xl md:text-xl">
-          Himalayan Java Coffee Beans are grown locally and are roasted to perfection in the ideal Himalayan air. It is then packaged immediately and rushed off to our outlets which ensures we deliver the best coffee experience possible for all of our customers.
+          CoffeeHub Coffee Beans are grown locally and are roasted to perfection in the ideal Himalayan air. It is then packaged immediately and rushed off to our outlets which ensures we deliver the best coffee experience possible for all of our customers.
         </p>
         <button className="bg-orange-900 text-gray-300 text-xl md:text-lg py-3 px-7 mt-11">
           See Menu

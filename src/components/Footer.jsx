@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <div className="grid grid-cols-3 md:grid-cols-2 md:gap-y-8 mx-10 my-10 p-8">
+      <div className="grid grid-cols-3 md:grid-cols-2 md:gap-y-8  mx-10 my-10 p-8">
         <div className="menu">
           <ul>
 

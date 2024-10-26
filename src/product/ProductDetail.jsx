@@ -24,27 +24,24 @@ const ProductDetail = () => {
   return (
     <>
 
-      <div className='grid grid-cols-3 p-4 items-start gap-20'>
-
-
-        <div className="image">
-          <img className='w-full' src={`${imageUrl}${data.image}`} alt="" />
-          {data && <AddCart onClick={() => {
-            if (user && !user?.isAdmin) {
-              handleOpen();
-            } else {
-              nav('/login');
-            }
-          }} product={data} />}
-
-
+      <div className='flex flex-col items-center justify-center p-2 w-72 h-48'> {/* Adjust width and height */}
+        <div className="image w-full h-full"> {/* Make sure the image takes the full width and height */}
+          <img className='w-full h-full object-cover' src={`${imageUrl}${data.image}`} alt="" /> {/* Use object-cover to maintain aspect ratio */}
+          {data && (
+            <AddCart
+              onClick={() => {
+                if (user && !user?.isAdmin) {
+                  handleOpen();
+                } else {
+                  nav('/login');
+                }
+              }}
+              product={data}
+            />
+          )}
         </div>
-
-
-
-
-
       </div>
+
 
     </>
   )

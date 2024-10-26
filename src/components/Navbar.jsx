@@ -47,10 +47,10 @@ function Navbar() {
             <a href="">About</a>
           </li>
           <li className='text-2xl py-8'>
-            <a href="#gallery">Services</a>
+            <a href="#services">Services</a>
           </li>
           <li className='text-2xl py-8'>
-            <a href="#deals">Trainings</a>
+            <a href="#services">Trainings</a>
           </li>
           <li className='text-2xl py-8'>
             <a href="#contact">Contact</a>

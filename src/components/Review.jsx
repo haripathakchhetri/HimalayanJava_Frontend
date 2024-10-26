@@ -37,7 +37,7 @@ const Review = () => {
           <div className="text-white">
             {/* Large screens with line breaks */}
             <p className="sm:hidden block text-[20px]">
-              The Himalayan Java Coffee house had the <br />
+              The CoffeeHub had the <br />
               best coffee around Pokhara. The shop is <br />
               quiet, clean and has an outdoor sitting area <br />
               to enjoy your coffee and people watch. The <br />
@@ -47,7 +47,7 @@ const Review = () => {
 
             {/* Small screens without line breaks */}
             <p className="md:block hidden sm:text-[6px] ">
-              The Himalayan Java Coffee house had the best coffee around Pokhara. The shop is quiet, clean and has an outdoor...
+              The CoffeeHub had the best coffee around Pokhara. The shop is quiet, clean and has an outdoor...
             </p>
           </div>
         </div>
