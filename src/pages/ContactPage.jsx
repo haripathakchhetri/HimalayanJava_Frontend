@@ -34,7 +34,7 @@ const ContactPage = () => {
             <form
               action="https://getform.io/f/amdpqgob"
               method="POST"
-              className="flex flex-col w-1/2 md:w-full space-y-2 bg-white p-3 rounded-lg "
+              className="flex flex-col w-1/2 md:w-full space-y-2 bg-gray-500 p-3 rounded-lg "
             >
               <label htmlFor="name" className="sr-only">Name</label>
               <input
