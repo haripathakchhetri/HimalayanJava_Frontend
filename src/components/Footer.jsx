@@ -1,26 +1,28 @@
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-      <div className="grid grid-cols-3 md:grid-cols-2 md:gap-y-8  mx-10 my-10 p-8">
+      <div className="grid grid-cols-3 md:grid-cols-1 md:gap-y-8  mx-10 my-10 p-8">
         <div className="menu">
           <ul>
 
             <li className="mb-4">
-              <a href="#about" >About</a>
+              <a href="/" >About</a>
+            </li>
+
+            <li className="mb-4">
+              <Link to={"/service-page"}>Services</Link>
             </li>
             <li className="mb-4">
-              <a href="#findUs" >Find Us</a>
-            </li>
-            <li className="mb-4">
-              <a href="#services" >Services</a>
-            </li>
-            <li className="mb-4">
-              <a href="#services" >Trainings</a>
+              <Link to={"/training-page"}>Trainings</Link>
             </li>
             <li className="mb-4">
               <a href="#" >Team</a>
+            </li>
+            <li className="mb-4">
+              <Link to={"/contact"}>Contact</Link>
             </li>
             <li className="mb-4">
               <a href="#" >FAQs</a>
@@ -34,10 +36,10 @@ const Footer = () => {
           <h1 className="text-2xl font-semibold mb-4">Contact</h1>
           <p className="mb-2">Tridevi Marg, Thamel</p>
           <p className="mb-2">Kathmandu, Nepal</p>
-          <p className="mb-2"><a href="mailto:info@himalayanjava.com" className="underline">info@himalayanjava.com</a></p>
+          <p className="mb-2"><a href="mailto:info@coffeehub.com" className="underline">info@coffeehub.com</a></p>
           <p className="mb-2">+977-[0]1-4435171</p>
         </div>
-        <div className="map">
+        <div className="map my-2">
           <div>
             <iframe
               title="map"

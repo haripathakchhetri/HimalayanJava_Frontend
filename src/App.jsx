@@ -16,6 +16,9 @@ import AddForm from "./admin-ui/AddForm";
 import ProductEdit from "./admin-panel/ProductEdit/ProductEdit";
 import About from "./components/About";
 import Services from "./components/Services";
+import ServicePage from "./pages/ServicePage";
+import TrainingPage from "./pages/TrainingPage";
+import ContactPage from "./pages/ContactPage";
 
 
 const App = () => {
@@ -42,6 +45,21 @@ const App = () => {
         {
           path: "cart-page",
           element: <CartPage />
+        },
+
+        {
+          path: "service-page",
+          element: <ServicePage />
+        },
+
+        {
+          path: "training-page",
+          element: <TrainingPage />
+        },
+
+        {
+          path: "contact",
+          element: <ContactPage />
         },
 
 
