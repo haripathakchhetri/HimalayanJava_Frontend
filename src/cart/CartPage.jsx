@@ -19,7 +19,7 @@ const CartPage = () => {
   return (
     <div className='p-6'>
       {carts.length === 0 ? (
-        <h1 className='text-xl font-semibold'>Your cart is empty. Add some items!</h1>
+        <h1 className='text-xl font-semibold'>You have placed your order Successfully. <span><a href="/" className='underline text-blue-400 hover:cursor-pointer'>Go Back</a></span></h1>
       ) : (
         <div className='overflow-x-auto'>
           <table className='min-w-full border-collapse border border-gray-300 rounded-lg shadow-md'>
