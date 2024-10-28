@@ -10,9 +10,9 @@ const About = () => {
         <p className="mt-3 text-gray-500 text-2xl md:text-xl">
           CoffeeHub Coffee Beans are grown locally and are roasted to perfection in the ideal Himalayan air. It is then packaged immediately and rushed off to our outlets which ensures we deliver the best coffee experience possible for all of our customers.
         </p>
-        <button className="bg-orange-900 text-gray-300 text-xl md:text-lg py-3 px-7 mt-11">
+        <a href="#menu"><button className="bg-orange-900 text-gray-300 text-xl md:text-lg py-3 px-7 mt-11">
           See Menu
-        </button>
+        </button></a>
         <div className='mt-8 flex justify-between hover:cursor-pointer'>
           <FaFacebookF className='mx-2' />
           <FaYoutube className='mx-2' />

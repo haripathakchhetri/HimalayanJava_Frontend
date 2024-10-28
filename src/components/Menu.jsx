@@ -11,7 +11,7 @@ const Menu = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center mx-4 min-h-[600px]">
+      <div id="menu" className=" flex flex-col items-center mx-4 min-h-[600px]">
         <h1 className="text-5xl md:text-3xl font-bold my-4">Menu</h1>
         <p className="text-gray-700 text-2xl md:text-xl text-center mb-10">
           While most of the food in our menu changes from kitchen to kitchen and <br /> from cook to cook, what remains the same is out product from the bakery.

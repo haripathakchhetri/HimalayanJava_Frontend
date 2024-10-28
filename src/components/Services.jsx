@@ -2,6 +2,7 @@ import coffeeImage from '../assets/coffee.png';
 import BaristaTraining from "../assets/Training.png";
 import Equipment from "../assets/Equipment.png"
 import Cookies from "../assets/Cookies.png"
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   return (
@@ -13,7 +14,7 @@ const Services = () => {
         <h2 className="text-3xl md:text-2xl font-bold my-4 ">Our Services</h2>
         <p className="mt-3 text-gray-500 text-2xl md:text-xl">CoffeeHub offers its customers the best-tasting coffee beverages in the country. We have achieved this by using high-quality ingredients and strictly following preparation guidelines.</p>
 
-        <a href="#contact"><button className="bg-orange-900 text-gray-300 text-xl md:text-lg py-3 px-7 mt-11">Contact Us</button></a>
+        <Link to={"/contact"}><button type='button' className="bg-orange-900 text-gray-300 text-xl md:text-lg py-3 px-7 mt-11">Contact Us</button></Link>
 
       </div>
 
