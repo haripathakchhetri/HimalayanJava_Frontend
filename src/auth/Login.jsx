@@ -12,6 +12,8 @@ import {
 import { useLoginUserMutation } from "./userApi";
 import { useDispatch } from "react-redux";
 import { addUser } from "./userSlice";
+import { useState } from "react";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 export const loginSchema = Yup.object({
   email: Yup.string().email().required(),
@@ -21,6 +23,11 @@ export const loginSchema = Yup.object({
 const Login = () => {
 
   const nav = useNavigate();
+
+  const [show, setShow] = useState(false)
+  const onShowHide = () => {
+    setShow((prev) => !prev)
+  }
 
   const dispatch = useDispatch();
 
@@ -79,18 +86,26 @@ const Login = () => {
             {errors.email && touched.email && <h1 className="text-red-600">{errors.email}</h1>}
 
 
+            <div className="relative">
 
-            <Input
-              type="password"
-              size="lg"
-              name="password"
-              onChange={handleChange}
-              value={values.password}
-              label="Password"
+              <Input
+                type={show ? "text" : "password"}
+                size="lg"
+                name="password"
+                onChange={handleChange}
+                value={values.password}
+                label="Password"
 
-            />
+              />
+
+              <button className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 hover:text-gray-700 focus:outline-none" onClick={onShowHide} type="button">{show ? (<FaRegEyeSlash />) : (<FaRegEye />)}</button>
+
+
+
+            </div>
 
             {errors.password && touched.password && <h1 className="text-red-600">{errors.password}</h1>}
+
 
           </div>
 

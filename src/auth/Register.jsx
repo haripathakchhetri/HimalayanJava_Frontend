@@ -10,9 +10,16 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { useRegisterUserMutation } from "./userApi";
+import { useState } from "react";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 
 const Register = () => {
+
+  const [show, setShow] = useState(false);
+  const onShowHide = () => {
+    setShow((prev) => !prev)
+  }
 
   const [registerUser, { isLoading }] = useRegisterUserMutation();
 
@@ -80,15 +87,25 @@ const Register = () => {
 
 
 
-            <Input
-              type="password"
-              size="lg"
-              label="Password"
-              name="password"
-              onChange={handleChange}
-              value={values.password}
+            <div className="relative">
+              <Input
+                type={show ? "text" : "password"}
+                size="lg"
+                label="Password"
+                name="password"
+                onChange={handleChange}
+                value={values.password}
 
-            />
+              />
+
+              <button
+                className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 hover:text-gray-700 focus:outline-none"
+                onClick={onShowHide}
+                type="button"
+              >
+                {show ? (<FaRegEyeSlash />) : (<FaRegEye />)}
+              </button>
+            </div>
 
             {errors.password && touched.password && <h1 className="text-red-600">{errors.password}</h1>}
           </div>
