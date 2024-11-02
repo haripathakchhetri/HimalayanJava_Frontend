@@ -19,7 +19,7 @@ const Footer = () => {
               <Link to={"/training-page"}>Trainings</Link>
             </li>
             <li className="mb-4">
-              <a href="#" >Team</a>
+              <Link to={"/menu-page"}>Menu</Link>
             </li>
             <li className="mb-4">
               <Link to={"/contact"}>Contact</Link>

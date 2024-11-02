@@ -1,13 +1,16 @@
 
+import { Link } from "react-router-dom";
 import { useGetAllProductsQuery } from "../product/productApi";
 import ProductCard from "../product/ProductCard";
 
 
 
-const Menu = () => {
+const Menu = ({ showAll = false, backgroundColor }) => {
 
   const { data } = useGetAllProductsQuery();
   console.log(data)
+
+  const displayedProducts = showAll ? data : data?.slice(0, 3);
 
   return (
     <>
@@ -17,8 +20,17 @@ const Menu = () => {
           While most of the food in our menu changes from kitchen to kitchen and <br /> from cook to cook, what remains the same is out product from the bakery.
         </p>
 
-        <div className="p-8 grid grid-cols-3 md:grid-cols-1  gap-6 bg-pink-50">
-          {data && data.map((product) => {
+        {/* View All Link */}
+        {!showAll && (
+          <div className="flex justify-end w-full mb-4 pr-4">
+            <Link to="/menu-page" className="text-md text-blue-600 hover:underline">
+              View All
+            </Link>
+          </div>
+        )}
+
+        <div className={`p-8 grid grid-cols-3 md:grid-cols-1  gap-6 ${backgroundColor}`}>
+          {displayedProducts && displayedProducts.map((product) => {
             return <ProductCard key={product._id} product={product} />
           })}
         </div>

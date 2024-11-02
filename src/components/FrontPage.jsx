@@ -13,7 +13,7 @@ const FrontPage = () => {
       <About />
       <Services />
       <Find />
-      <Menu />
+      <Menu showAll={false} backgroundColor="bg-pink-50" />
       <Review />
       <Footer />
     </>

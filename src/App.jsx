@@ -14,11 +14,10 @@ import Orders from "./admin-ui/Orders";
 import Dashboard from "./admin-ui/Dashboard";
 import AddForm from "./admin-ui/AddForm";
 import ProductEdit from "./admin-panel/ProductEdit/ProductEdit";
-import About from "./components/About";
-import Services from "./components/Services";
 import ServicePage from "./pages/ServicePage";
 import TrainingPage from "./pages/TrainingPage";
 import ContactPage from "./pages/ContactPage";
+import MenuPage from "./pages/MenuPage";
 
 
 const App = () => {
@@ -50,6 +49,11 @@ const App = () => {
         {
           path: "service-page",
           element: <ServicePage />
+        },
+
+        {
+          path: "menu-page",
+          element: <MenuPage />
         },
 
         {

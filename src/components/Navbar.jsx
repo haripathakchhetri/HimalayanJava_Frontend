@@ -26,12 +26,18 @@ function Navbar() {
         <li className={`mx-4 hover:scale-125 duration-200 ${isAboutPage ? 'text-black' : 'text-white'}`}>
           <Link to={"/"}>About</Link>
         </li>
+
         <li className={`mx-4 hover:scale-125 duration-200 ${isAboutPage ? 'text-black' : 'text-white'}`}>
           <Link to={"/service-page"}>Services</Link>
         </li>
         <li>
           <img className='mx-8 hover:scale-125 duration-200' src={Equipment} alt="" />
         </li>
+
+        <li className='mx-4 hover:scale-125 duration-200 '>
+          <Link to={"/menu-page"}>Menu</Link>
+        </li>
+
         <li className='mx-4 hover:scale-125 duration-200'>
           <Link to={"/training-page"}>Trainings</Link>
         </li>
@@ -53,6 +59,9 @@ function Navbar() {
           </li>
           <li className='text-2xl py-8'>
             <Link to={"/service-page"}>Services</Link>
+          </li>
+          <li className='text-2xl py-8'>
+            <Link to={"/menu-page"}>Menu</Link>
           </li>
           <li className='text-2xl py-8'>
             <Link to={"/training-page"}>Trainings</Link>
