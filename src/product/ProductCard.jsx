@@ -21,7 +21,7 @@ const ProductCard = ({ product: { image, title, price, _id } }) => {
     <>
 
 
-      <Card onClick={() => nav(`/product-detail/${_id}`)} className="w-full max-w-[48rem] flex-row bg-transparent items-center mb-7 cursor-pointer "
+      <Card onClick={() => nav(`/product-detail/${_id}`)} className="w-full max-w-[48rem] flex-row bg-transparent items-center text-start mb-7 cursor-pointer "
         shadow={false}
 
       >

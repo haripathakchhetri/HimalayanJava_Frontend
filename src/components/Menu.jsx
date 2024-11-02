@@ -10,7 +10,7 @@ const Menu = ({ showAll = false, backgroundColor }) => {
   const { data } = useGetAllProductsQuery();
   console.log(data)
 
-  const displayedProducts = showAll ? data : data?.slice(0, 3);
+  const displayedProducts = showAll ? data : data?.slice(0, 6);
 
   return (
     <>
@@ -22,7 +22,7 @@ const Menu = ({ showAll = false, backgroundColor }) => {
 
         {/* View All Link */}
         {!showAll && (
-          <div className="flex justify-end w-full mb-4 pr-4">
+          <div className="flex justify-end w-full mb-1 pr-4">
             <Link to="/menu-page" className="text-md text-blue-600 hover:underline">
               View All
             </Link>

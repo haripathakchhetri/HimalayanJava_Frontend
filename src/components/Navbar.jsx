@@ -31,7 +31,7 @@ function Navbar() {
           <Link to={"/service-page"}>Services</Link>
         </li>
         <li>
-          <img className='mx-8 hover:scale-125 duration-200' src={Equipment} alt="" />
+          <img className='mx-10 hover:scale-125 duration-200' src={Equipment} alt="" />
         </li>
 
         <li className='mx-4 hover:scale-125 duration-200 '>

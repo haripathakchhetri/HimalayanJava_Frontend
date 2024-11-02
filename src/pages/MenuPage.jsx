@@ -1,4 +1,4 @@
-import CoffeeBeans from "../assets/CoffeeBeans.jpg";
+import MenuImage from "../assets/MenuImage.jpg";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
 import Navbar from "../components/Navbar";
@@ -13,8 +13,8 @@ const MenuPage = () => {
       <div className="relative">
         <img
           className="h-[70vh] sm:h-[50vh]  w-full object-cover"
-          src={CoffeeBeans}
-          alt="Coffee Beans"
+          src={MenuImage}
+          alt="Menu Image"
         />
         <div className="absolute top-0 left-0 w-full h-[70vh] sm:h-[50vh]  bg-black bg-opacity-50 flex items-center justify-center">
           <h1 className="text-5xl sm:text-3xl  font-bold text-white drop-shadow-lg text-center px-4 ">
