@@ -7,7 +7,7 @@ import ProductCard from "../product/ProductCard";
 
 const Menu = ({ showAll = false, backgroundColor }) => {
 
-  const { data } = useGetAllProductsQuery();
+  const { data, isLoading } = useGetAllProductsQuery();
   console.log(data)
 
   const displayedProducts = showAll ? data : data?.slice(0, 6);
@@ -29,11 +29,17 @@ const Menu = ({ showAll = false, backgroundColor }) => {
           </div>
         )}
 
-        <div className={`p-8 grid grid-cols-3 md:grid-cols-1  gap-6 ${backgroundColor}`}>
-          {displayedProducts && displayedProducts.map((product) => {
-            return <ProductCard key={product._id} product={product} />
-          })}
-        </div>
+        {
+          isLoading ? (
+            <div className="text-xl font-medium text-gray-600">Loading...</div>
+          ) : (
+            <div className={`p-8 grid grid-cols-3 md:grid-cols-1  gap-6 ${backgroundColor}`}>
+              {displayedProducts && displayedProducts.map((product) => {
+                return <ProductCard key={product._id} product={product} />
+              })}
+            </div>
+          )
+        }
 
       </div>
 
