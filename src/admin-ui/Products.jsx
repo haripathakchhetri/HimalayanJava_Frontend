@@ -1,7 +1,7 @@
 import { Avatar, Card, Typography, Button } from "@material-tailwind/react";
 import { imageUrl } from "../app/constants/spi_urls";
 import { useGetAllProductsQuery, useRemoveProductByIdMutation } from "../product/productApi";
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 import { toast } from "react-toastify";
 
 
@@ -9,6 +9,8 @@ const Products = () => {
   const { isLoading, data } = useGetAllProductsQuery();
 
   const [removeProduct, { isLoading: isDeleting }] = useRemoveProductByIdMutation();
+
+  const { searchQuery } = useOutletContext(); //Get search query from context
 
   const TABLE_HEAD = ["Avatar", "Title", "Price", "CreatedAt", "", ""];
 
@@ -23,6 +25,11 @@ const Products = () => {
       }
     }
   };
+
+  //filter products based on search query
+  const filteredData = data?.filter(({ title }) => {
+    return title.toLowerCase().includes(searchQuery.toLowerCase())
+  })
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -55,8 +62,8 @@ const Products = () => {
             </tr>
           </thead>
           <tbody>
-            {data?.map(({ title, image, price, createdAt, _id }, index) => {
-              const isLast = index === data.length - 1;
+            {filteredData?.map(({ title, image, price, createdAt, _id }, index) => {
+              const isLast = index === filteredData.length - 1;
               const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
 
               return (

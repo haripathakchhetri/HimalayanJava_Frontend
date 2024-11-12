@@ -42,8 +42,6 @@ const Menu = ({ showAll = false, backgroundColor }) => {
         }
 
       </div>
-
-
     </>
   )
 }
